@@ -18,7 +18,7 @@ import { TodosComponent } from './todos/todos.component';
     TodosComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule
+    BrowserModule, BrowserAnimationsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

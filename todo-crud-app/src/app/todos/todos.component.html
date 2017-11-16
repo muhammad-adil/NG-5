@@ -1,6 +1,18 @@
 <!-- <p>
   todos works!
 </p> -->
+<h2>Add Todos</h2>
+<form (submit)="addTodo()">
+  <input type="text" [(ngModel)]="text" name="todoText" />
+</form>
+
+<h3>Todos</h3>
+
+<ul>
+  <li *ngFor="let todo of todos"> {{ todo.text }}</li>
+</ul>
+
+
 <button (click)="modal = !modal" class="btn">Update</button>
 
 <Modal [(visible)]="modal">
