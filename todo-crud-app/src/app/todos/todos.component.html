@@ -1,0 +1,9 @@
+<!-- <p>
+  todos works!
+</p> -->
+<button (click)="modal = !modal" class="btn">Update</button>
+
+<Modal [(visible)]="modal">
+  <Update> </Update>
+  <button (click)="modal = !modal" class="btn">Close</button>
+</Modal>
