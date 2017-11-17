@@ -1,21 +1,23 @@
-<!-- <p>
-  todos works!
-</p> -->
 <h2>Add Todos</h2>
-<form (submit)="addTodo()">
-  <input type="text" [(ngModel)]="text" name="todoText" />
+<form>
+    <!-- (submit)="addTodo()" -->
+  <input type="text" [(ngModel)]="text" name="todoText" placeholder="" />
+  <input type="submit" (click)="addTodo()" value="Add Todo" />
+  <!-- <button type="submit" (click)="deleteTodo(todo.text)">Edit</button> -->
 </form>
 
 <h3>Todos</h3>
-
 <ul>
-  <li *ngFor="let todo of todos"> {{ todo.text }}</li>
+  <li *ngFor="let todo of todos">
+    {{ todo.text }}
+    <button (click)="deleteTodo(todo.text)">Delete</button> &nbsp;
+    <button (click)="updateTodo(todo.text)">Edit</button>
+  </li>
 </ul>
-
 
 <button (click)="modal = !modal" class="btn">Update</button>
 
 <Modal [(visible)]="modal">
-  <Update> </Update>
+  <Update></Update>
   <button (click)="modal = !modal" class="btn">Close</button>
 </Modal>
