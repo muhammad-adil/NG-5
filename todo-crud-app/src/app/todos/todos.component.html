@@ -11,13 +11,12 @@
   <li *ngFor="let todo of todos">
     {{ todo.text }}
     <button (click)="deleteTodo(todo.text)">Delete</button> &nbsp;
-    <button (click)="updateTodo(todo.text)">Edit</button>
+    <!-- <button (click)="updateTodo(todo.text)">Edit</button> -->
+    <button (click)="modal = !modal" class="btn">Update</button>
   </li>
 </ul>
 
-<button (click)="modal = !modal" class="btn">Update</button>
-
-<Modal [(visible)]="modal">
+<app-modal [(visible)]="modal">
   <Update></Update>
-  <button (click)="modal = !modal" class="btn">Close</button>
-</Modal>
+  <button (click)="modal = !modal" class="btn">Update</button>
+</app-modal>

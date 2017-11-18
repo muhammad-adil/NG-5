@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angu
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
-  selector: 'Modal',
+  selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
   animations: [
