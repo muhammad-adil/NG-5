@@ -16,7 +16,7 @@
   </li>
 </ul>
 
-<app-modal [(visible)]="modal">
-  <Update></Update>
+<app-modal [(visible)]="modal" [todo]="todo">
+  <app-update></app-update>
   <button (click)="modal = !modal" class="btn">Update</button>
 </app-modal>
