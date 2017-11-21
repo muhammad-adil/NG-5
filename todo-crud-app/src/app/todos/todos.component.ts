@@ -8,19 +8,18 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+
   @Input() updatedTodoText;
 
   constructor() { }
     text;
     todos;
     todoText;
-    // receiveMessage($event) {
-    //   this.message = $event
-    // }
 
     ngOnInit(){
       this.todos = [{ text: 'Todo 1'}, { text: 'Todo 2'}, { text: 'Todo 3'} ];
     }
+
     addTodo() {
       this.todos.push({ text: this.text });
     }
@@ -44,5 +43,4 @@ export class TodosComponent implements OnInit {
 
       }
     }
-
 }

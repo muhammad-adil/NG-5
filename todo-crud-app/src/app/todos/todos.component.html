@@ -20,7 +20,6 @@ todotext: {{todoText}}
 
 <app-modal [(visible)]="modal"  >
     <!-- [todo]="todo" -->
-  <app-update (updateTodoEvent)="receiveUpdatedTodo($event)">
-    {{ todoText }} </app-update>
+  <app-update (updateTodoEvent)="receiveUpdatedTodo($event)"></app-update>
   <!-- <button (click)="modal = !modal" class="btn">Close</button> -->
 </app-modal>
