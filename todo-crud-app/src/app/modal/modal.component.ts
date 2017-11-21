@@ -7,7 +7,7 @@ import { TodosComponent } from '../todos/todos.component';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
   animations: [
-    trigger('modal', [
+    trigger('dialog', [
       transition('void => *', [
         style({ transform: 'scale3d(.3, .3, .3)' }),
         animate(100)

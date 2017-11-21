@@ -15,16 +15,15 @@ export class UpdateComponent implements OnInit {
   @Input() task: string = '';
   @Input() index: number = 0;
   @Output('edit') editTodoEventEmitter: EventEmitter<object> = new EventEmitter();
-  
-  //@Output('delete') deleteTodoEventEmitter: EventEmitter<number> = new EventEmitter();
-
-  editTodo( task ) {
-    this.editTodoEventEmitter.next({index: this.index, task: this.task}); 
-    console.log('in editTodo', {index: this.index, task: this.task});  
-
+ 
+  //updateTodo
+  updateTodo(index, task ) {
+    this.editTodoEventEmitter.next({index: this.index, task: this.task});
+    
+    console.log('in updateTodo', {index: this.index, task: this.task}); 
   }
 
-//   // deleteTodo(task: string) {
+////deleteTodo(task: string) {
 //   deleteTodo(index: number) {
 //     // this.deleteTodoEventEmitter.next(task);
 //     this.deleteTodoEventEmitter.next(index);

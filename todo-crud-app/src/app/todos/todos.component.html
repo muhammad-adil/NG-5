@@ -8,36 +8,15 @@
 <ul>
   <li *ngFor="let todo of todos; let i = index;"  >
     {{ todo }}
-    <button (click)="deleteTodo(todo.text)">Delete</button> &nbsp;
+    <button (click)="deleteTodo(todo)">Delete</button> &nbsp;
     <!-- <button (click)="updateTodo(todo.text)">Edit</button> -->
     <button class="btn" 
-      (click)="editTodo(index)">Edit</button>
+      (click)="editTodo(i)">Edit</button>
   </li>
 </ul>
-todotext: {{ todo }}
-<!-- 
-<h1 class="text-center">Todos</h1>
-<div class="panel panel-warning">
-  <div class="panel-body">
-    <div class="form-group">
-      <input class="form-control" type="text" name="todo" id="todo" [(ngModel)]="todo" value="">
-    </div>
-    <button class="btn btn-default" (click)="addTodo()" *ngIf="!showUpdate">Add</button>
-    <button class="btn btn-default" (click)="updateTodo()" *ngIf="showUpdate">Update</button>
-  </div>
-</div> -->
-<!-- <app-todo *ngFor="let todo of todos; let i = index;" [task]="todo" [index]="i" (edit)="editTodo($event)" (delete)="deleteTodo($event)"></app-todo> -->
-<!-- 
-<ul><li *ngFor="let todo of todos; let i = index;" [task]="todo" [index]="i" ></li></ul> -->
+todo: {{ todo }}
 
-
-<app-modal [(visible)]="modal"  >
-    <!-- [todo]="todo" -->
-  <!-- <app-update (updateTodoEvent)="receiveUpdatedTodo($event)"></app-update> -->
-  <app-update [task]="todo" [index]="i" (edit)="updateTodo($event)">
-
-  </app-update>
-
-  <!-- (delete)="deleteTodo($event)" -->
-  <!-- <button (click)="modal = !modal" class="btn">Close</button> -->
+<app-modal [(visible)]="modal" >
+  
+  <app-update [task]="todo" [index]="currentTodoIndex" (edit)="updateTodo($event)"></app-update>
 </app-modal>
