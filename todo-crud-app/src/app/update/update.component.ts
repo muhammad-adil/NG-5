@@ -8,22 +8,26 @@ import {TodosComponent} from '../todos/todos.component';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-//  @Input() todo;
-  @Output() updateTodoEvent = new EventEmitter();
-  
-  todotext = 'avccc' ; 
 
   constructor() { }
-  ngOnInit() {  }
- 
-  // message = this.todoText;
-  //text = this.todo.text; 
-    sendUpdatedTodo(){
-      this.updateTodoEvent.emit(this.todotext)
-    }
-    
-  // sendMessage() {
-  //   this.messageEvent.emit(this.message)
-  // }
+  ngOnInit() { }
 
+  @Input() task: string = '';
+  @Input() index: number = 0;
+  @Output('edit') editTodoEventEmitter: EventEmitter<object> = new EventEmitter();
+  
+  //@Output('delete') deleteTodoEventEmitter: EventEmitter<number> = new EventEmitter();
+
+  editTodo( task ) {
+    this.editTodoEventEmitter.next({index: this.index, task: this.task}); 
+    console.log('in editTodo', {index: this.index, task: this.task});  
+
+  }
+
+//   // deleteTodo(task: string) {
+//   deleteTodo(index: number) {
+//     // this.deleteTodoEventEmitter.next(task);
+//     this.deleteTodoEventEmitter.next(index);
+//     console.log('inside delete todo' , index )
+// }
 }

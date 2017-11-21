@@ -1,7 +1,7 @@
 
-<input type="text" name="updatetodo" [(ngModel)]="todoText" input="value = $event.target.value"/>
 
-<button (click)="sendUpdatedTodo()">Update Todo</button>
+<input type="text" name="updatetodo" [(ngModel)]="task"/>
+
+<button (click)="editTodo(task)">Update Todo</button>
 <br/>
-
-todotext: {{todoText}}
+Todo task: {{task}}
