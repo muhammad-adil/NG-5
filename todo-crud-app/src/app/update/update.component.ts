@@ -11,7 +11,7 @@ export class UpdateComponent implements OnInit {
 //  @Input() todo;
   @Output() updateTodoEvent = new EventEmitter();
   
-  todotext = 'abc' ; 
+  todotext = 'avccc' ; 
 
   constructor() { }
   ngOnInit() {  }

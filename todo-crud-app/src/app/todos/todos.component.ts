@@ -33,8 +33,16 @@ export class TodosComponent implements OnInit {
       }
     }
     
-    receiveUpdatedTodo($event) {
-      this.todoText = $event
+    receiveUpdatedTodo($event, todoText) {
+      //this.todoText = $event
+      console.log('update event*************' , $event , todoText )
+
+      for ( let i = 0; i < this.todos.length; i++) {
+        if ( this.todos[i].text === todoText) {
+          this.todos[i] = $event;
+        }
+
+      }
     }
 
 }
