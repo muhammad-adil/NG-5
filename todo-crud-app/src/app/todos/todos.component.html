@@ -16,7 +16,11 @@
   </li>
 </ul>
 
-<app-modal [(visible)]="modal" [todo]="todo">
-  <app-update></app-update>
-  <button (click)="modal = !modal" class="btn">Update</button>
+todotext: {{todoText}}
+
+<app-modal [(visible)]="modal"  >
+    <!-- [todo]="todo" -->
+  <app-update (updateTodoEvent)="receiveUpdatedTodo($event)">
+    {{ todoText }} </app-update>
+  <!-- <button (click)="modal = !modal" class="btn">Close</button> -->
 </app-modal>

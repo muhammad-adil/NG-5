@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import {TodosComponent} from '../todos/todos.component';
 
 @Component({
   selector: 'app-update',
@@ -6,11 +8,22 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+//  @Input() todo;
+  @Output() updateTodoEvent = new EventEmitter();
+  
+  todotext = 'abc' ; 
 
   constructor() { }
-
   ngOnInit() {  }
-
-  // @Input() todo:string;
+ 
+  // message = this.todoText;
+  //text = this.todo.text; 
+    sendUpdatedTodo(){
+      this.updateTodoEvent.emit(this.todotext)
+    }
+    
+  // sendMessage() {
+  //   this.messageEvent.emit(this.message)
+  // }
 
 }

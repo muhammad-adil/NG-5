@@ -2,23 +2,25 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UpdateComponent } from '../update/update.component';
 import { ModalComponent } from '../modal/modal.component';
 
-
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+  @Input() updatedTodoText;
 
   constructor() { }
-    todos;
     text;
-    todo = this.todo.text;
+    todos;
+    todoText;
+    // receiveMessage($event) {
+    //   this.message = $event
+    // }
 
-  ngOnInit() {
-    this.todos = [{ text: 'Todo 1'}, { text: 'Todo 2'}, { text: 'Todo 3'} ];
-  }
-
+    ngOnInit(){
+      this.todos = [{ text: 'Todo 1'}, { text: 'Todo 2'}, { text: 'Todo 3'} ];
+    }
     addTodo() {
       this.todos.push({ text: this.text });
     }
@@ -30,4 +32,9 @@ export class TodosComponent implements OnInit {
         }
       }
     }
+    
+    receiveUpdatedTodo($event) {
+      this.todoText = $event
+    }
+
 }
