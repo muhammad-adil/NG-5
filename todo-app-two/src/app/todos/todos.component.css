@@ -1,0 +1,43 @@
+
+
+.flex-child{
+    flex: 1 1 auto;
+}
+/* .flex-2{
+  align-items: flex-end;
+} */
+.todotext{
+	font-family: 'Dosis', sans-serif;
+    font-size: 15;
+	margin-bottom: 10px;
+	list-style-type: decimal;
+}
+.addTodoForm{ margin-bottom: 10px;}
+.addTodoForm .input__text{
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 8px;
+	font-family: 'Dosis', sans-serif;
+    font-size: 26px;
+    margin: 10px; 
+}
+.btn {
+	margin-left: 10px;
+	background-color:#5b585c;
+	border:0px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Dosis', sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	transition: all .3s ease-in-out;
+}
+.btn:hover {
+	background-color:#000000;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}

@@ -1,0 +1,6 @@
+
+<input type="text" name="updatetodo" class="input__text" [(ngModel)]="task" [maxlength]="26" />
+
+<button class="btn" (click)="updateTodo(task)"> Update Todo </button>
+
+<p class="todotask"> Todo Task: {{ task }} </p>

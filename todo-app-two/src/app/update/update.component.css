@@ -1,0 +1,33 @@
+/* .addTodoForm{ margin-bottom: 10px;} */
+.input__text{
+    border: 2px solid crimson;
+    background-color: #fff;
+    padding: 8px;
+	font-family: 'Dosis', sans-serif;
+    font-size: 26px;
+    margin: 10px; 
+}
+.todotask{
+    text-align:center;
+	font-family: 'Dosis', sans-serif;
+}
+.btn {
+	background-color:#16ace7;
+	border : 0px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Dosis', sans-serif;
+	font-size:15px;
+	font-weight:bold;
+    margin-left: 10px;
+	padding:6px 24px;
+	transition: all .3s ease-in-out;
+}
+.btn:hover {
+	background-color:#f8005f;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
