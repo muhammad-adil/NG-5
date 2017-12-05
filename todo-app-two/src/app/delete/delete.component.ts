@@ -8,18 +8,14 @@ import {TodosComponent} from '../todos/todos.component';
 })
 
 export class DeleteComponent implements OnInit {
-  @Input() task = '' ;
-  @Input() todo = '' ;
+  @Input() index:number ;
 
-  @Input() index = 0 ;
-  @Input() currentTodoIndex: number;
-
-  @Output() deleteTodoEventEmitter: EventEmitter<number> = new EventEmitter();
+  @Output('delete') deleteTodoEventEmitter: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
   ngOnInit() { }
 
-  ConfirmDeleteTodo(index) {
+  confirmDeleteTodo(index) {
     this.deleteTodoEventEmitter.emit(index);
     console.log('In delete component', index );
   }

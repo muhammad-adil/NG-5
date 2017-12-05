@@ -24,7 +24,7 @@ export class ModalComponent implements OnInit {
   @Input() closable = true;
   @Input() visible: boolean;
   // @Input() todo;
-  @Input() index: number = 0 ;
+  @Input() index: number;
 
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 

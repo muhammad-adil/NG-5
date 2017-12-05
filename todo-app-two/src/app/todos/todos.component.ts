@@ -14,8 +14,8 @@ export class TodosComponent implements OnInit {
 	updateModal: boolean = false;
 	todos: Array<string> = ['Todo-1', 'Todo-2', 'Todo-3', 'Todo-4'];
 	todo: string;
-	currentTodoIndex: number = null;
-  index: number = 0;
+	index:number;
+	currentTodoIndex: number;
   
 
 	constructor() {}
@@ -52,16 +52,20 @@ export class TodosComponent implements OnInit {
 	}
 
 	//deleteTodo
-	// deleteTodo(index) {
-	// 	this.modal = !this.modal;
-	// 	this.currentTodoIndex = index;
-	// 	this.todo = this.todos[index];
+	deleteTodo(index , i ) {
+		this.modal = !this.modal;
 
-	// 	console.log('deleteTodo function up', index);
-	// 	let Index = this.todos.indexOf(this.todo);
-	// 	// console.log('deleteTodo function up', index ); //Index, todo
-	// 	this.todos.splice(index, 1);
-  //   console.log('deleteTodo function', index, Index);
-  //   this.modal = !this.modal;
-	// }
+		this.currentTodoIndex = index;
+		this.todo = this.todos[index];
+		
+		console.log('deleteTodo function up', index , this.todos[index] );
+		
+		let Index = this.todos.indexOf(this.todo);
+		
+		console.log('deleteTodo function up', index ); //Index, todo
+		this.todos.splice(index, 1);
+
+		console.log('deleteTodo function', index, Index);
+		this.modal = !this.modal;
+	}
 }

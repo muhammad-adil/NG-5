@@ -10,7 +10,7 @@
   <ul>
     <li *ngFor="let todo of todos; let i=index;" class="todotext flex-child">
       {{ todo }}
-      <!-- <button (click)="modalToggle(i)" class="btn flex-child"> Delete </button> -->
+      <button (click)="modalToggle(i)" class="btn flex-child"> Delete </button>
       <!-- deleteTodo(todo) -->
       <!-- <button (click)="deleteTodo(i)" class="btn flex-child"> Delete </button> -->
       &nbsp;
@@ -25,6 +25,7 @@
   </app-modal>
 
   <app-modal [(visible)]="modal" [index]="currentTodoIndex">
-    <!-- <app-delete [task]="todo" [index]="currentTodoIndex" (delete)="deleteTodo($event)"> </app-delete> -->
-
+    <app-delete [index]="currentTodoIndex" (delete)="deleteTodo($event)">
+        <!-- <button (click)="deleteTodo(i)" class="btn flex-child"> Delete </button> -->
+    </app-delete>
   </app-modal>

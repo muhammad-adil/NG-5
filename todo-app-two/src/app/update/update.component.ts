@@ -19,11 +19,9 @@ export class UpdateComponent implements OnInit {
   @Input() currentTodoIndex: number = null;
   @Output('edit') editTodoEventEmitter: EventEmitter<object> = new EventEmitter();
   
-  //updateTodo
+  // updateTodo
   updateTodo( index, task, todo, todos ){
-    this.currentTodoIndex = index;
-    this.todo = this.todos[index];
-    this.editTodoEventEmitter.next({ index:this.index, task: this.task });
-    console.log('in updateTodo', {index: this.index, task: this.task}); 
+    this.editTodoEventEmitter.next({ index: this.index, task: this.task });
+    console.log('in updateTodo', {index: this.index, task: this.task});
     }
 }
