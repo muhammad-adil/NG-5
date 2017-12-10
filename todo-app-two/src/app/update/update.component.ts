@@ -12,15 +12,15 @@ export class UpdateComponent implements OnInit {
   ngOnInit() { }
 
   @Input() task:string = '';
-  @Input() todos;
-  @Input() todo;
+  // @Input() todos;
+  // @Input() todo;
 
   @Input() index: number = 0;
   @Input() currentTodoIndex: number = null;
   @Output('edit') editTodoEventEmitter: EventEmitter<object> = new EventEmitter();
   
   // updateTodo
-  updateTodo( index, task, todo, todos ){
+  updateTodo( index, task){
     this.editTodoEventEmitter.next({ index: this.index, task: this.task });
     console.log('in updateTodo', {index: this.index, task: this.task});
     }

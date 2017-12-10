@@ -14,17 +14,15 @@ export class TodosComponent implements OnInit {
 	updateModal: boolean = false;
 	todos: Array<string> = ['Todo-1', 'Todo-2', 'Todo-3', 'Todo-4'];
 	todo: string;
-	index:number = 0 ;
+	index:number;
 	currentTodoIndex: number;
   
 
-	constructor() {}
-	ngOnInit() {}
-
-	modalToggle(index) {
-		this.modal = !this.modal;
-		console.log('in modal function., modal clicked', index);
+	constructor() {
+		//this.index = 0 ;
 	}
+
+	ngOnInit() {}
 
 	// addTodo
 	addTodo() {
@@ -53,13 +51,14 @@ export class TodosComponent implements OnInit {
 
 	//deleteTodo
 	deleteTodo(index) {
+		// this.modal = !this.modal;
+		let currentTodoIndex = this.todos.indexOf(this.todo);
+		this.todos.splice(currentTodoIndex, 1);
+		//index = currentTodoIndex; 
 		this.modal = !this.modal;
-		let Index = this.todos.indexOf(this.todo);
-		console.log('deleteTodo function up', index , this.todos[index], this.todos.indexOf(this.todo) );
+	}
 
-		this.todos.splice(index, 1);
-
-		console.log('deleteTodo function', index, Index);
+	modalToggle(index) {
 		this.modal = !this.modal;
 	}
 }
