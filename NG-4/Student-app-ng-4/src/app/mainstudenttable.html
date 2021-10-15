@@ -1,0 +1,30 @@
+<div class="parent">
+        <form class='registrationForm'>
+            <input type="text" #fullName placeholder="Full Name" name="fullName" id="name"/>
+            <input type="email" #email placeholder="Email Address" name="email" id="mailAddress"/>
+            <input type="text" #age placeholder="age" name= "age" id="age"/>
+            <button id="submit" class="submitButton" (click)="this.studentService.getRegistered($event, fullName.value, email.value, age.value)">Register Now</button>  
+        </form>
+</div>
+    
+    <table>
+        <tr>
+            <th> Name </th>
+            <th> Email Address </th>
+            <th> Age </th> 
+        </tr>
+        
+        <tr *ngFor="let student of this.studentService.students; let i = index">
+            <td class="info" > {{ student.fullName }} </td>
+            <td class="info" > {{ student.email }} </td>
+            <td class="info" > {{ student.age }} </td>
+
+            <td>
+                 <button class="buttonsWithRow toggle" (click)="student.toggle()">Show/Hide</button> <!--[hidden]="true"   (click)="showHide = !showHide"-->                
+                 <!--<button class="buttonsWithRow" (click)="this.StudentService.delete(i)">Delete</button>-->
+                 <button class="buttonsWithRow" (click)="this.studentService.delete(i)">Delete</button>
+                 <button class="buttonsWithRow" (click)="this.studentService.edit(student, i, fullName, email, age)">Edit</button>
+                 <button class="buttonsWithRow" (click)="this.studentService.update(student, i, fullName, email, age)">Update</button>                
+            </td>
+        </tr>
+    </table>

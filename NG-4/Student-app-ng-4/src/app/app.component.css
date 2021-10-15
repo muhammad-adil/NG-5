@@ -1,0 +1,18 @@
+.main-heading{
+    color: #ff0000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.animate-i{
+     width: 300px;
+    /*transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);*/
+}
+
+.animate-i {
+    animation: come 5s 1s 1 forwards;
+}
+@keyframes come {
+	0% { transform: scale(0) translateY(0); }
+	100% { transform: scale(1) translateY(-5px); }
+}

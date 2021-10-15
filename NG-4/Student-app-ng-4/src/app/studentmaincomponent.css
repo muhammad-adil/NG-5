@@ -1,0 +1,25 @@
+div.parent{ 
+        font-family: 'Open Sans', sans-serif;
+         width : 100%; text-align : center
+}
+.registrationForm{ 
+        font-family: 'Open Sans', sans-serif;
+        border : 2px solid #4a64e0; 
+        margin : 0 auto; 
+        width : 50%; 
+        padding : 20px;
+}
+input{ 
+        padding : 10px; 
+        margin : 10px; 
+        border : none; border-bottom : 1px solid #4a64e0; text-align : center; outline : none; background : transparent }
+        button.submitButton{ display : block; padding : 10px; margin : 0 auto; cursor : pointer; background : #4a64e0; color : #fff; border-radius : 5px; border : none; margin-top : 10px; outline : none; font-family : 'Franklin Gothic Medium'; font-size : 16px; }
+        button.submitButton:hover{ transform : scale(1.05); transition : 0.3s; color : #4a64e0; background : #fff; border : 1px solid #4a64e0; }
+
+        table{ border : 1px solid #4a64e0; margin : 0 auto; margin-top : 20px; width : 70%}
+        th{ border : 1px solid#4a64e0}
+        .info{font-family: 'Open Sans', sans-serif; border-left : 1px solid #4a64e0; border-bottom : 1px solid #4a64e0; border-right : 1px solid #4a64e0; padding : 15px; text-align : center }
+        .buttonsWithRow{ width : 20% ;cursor : pointer; padding : 8px; background : #4a64e0; color : #fff; border-radius : 5px; border : none; outline : none; }
+        .buttonsWithRow:hover{ color : #4a64e0; background : #fff; border : 1px solid #4a64e0; transition : .4s; }
+        button.toggle{ margin-left : 20px; }
+    

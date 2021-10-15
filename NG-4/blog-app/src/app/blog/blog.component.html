@@ -1,0 +1,42 @@
+<div class="row">
+
+    <div class="col col-mat-8 col-sm-12 push-mat-4">
+        <!--<h2>Posts ({{ postService.allPost?.length }})</h2>-->
+
+        <mat-list>
+            <mat-list-item *ngFor="let post of postService.allPost">
+                <mat-card>
+                    <mat-card-title> {{ post.title }} </mat-card-title>
+
+                    <mat-card-content>
+                        <p class="card-text">{{ post.body }} {{ post.body }} </p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <button mat-button (click)="getCurrentPost(post.id)" [routerLink]="['post/', post.id]" class="card-link">Read more</button>
+                    </mat-card-actions>
+
+                </mat-card>
+            </mat-list-item>
+        </mat-list>
+    </div>
+
+
+        <div class="col col-mat-4 col-sm-4 pull-mat-8">
+                <mat-card>
+                    <mat-card-title> Sidebar title </mat-card-title>
+
+                    <mat-card-content>
+                        <p class="card-text"> Sidebar body </p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <!--<button mat-button (click)="getCurrentPost(post.id)" [routerLink]="['post/', post.id]" class="card-link">Read more</button>-->
+                        <button mat-button class="card-link">Read more Sidebar ads</button>
+                    </mat-card-actions>
+
+                </mat-card>
+
+        </div>
+
+</div>

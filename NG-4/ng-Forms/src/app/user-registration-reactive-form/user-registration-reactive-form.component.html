@@ -1,0 +1,71 @@
+<div class="form-container">
+  <h2> Model Driven/ Reactive Form </h2>
+<form>
+
+    <!--<input type="text" name="firstname" placeholder="FirstName" ngModel><br>
+  <input type="text" name="lastname" placeholder="LastName" ngModel><br>
+  <input type="email" name="email" placeholder="Email" ngModel><br>-->
+
+
+    <!--<select name="Interests" title="Interest" ngModel>
+    <option value="" selected>Interests</option>
+    <option value="Angular">Angular</option>
+    <option value="React">React</option>
+    <option value="Vue">Vue</option>
+  </select>-->
+
+</form>
+</div>
+
+<div class="form-container">
+  <form>
+
+    <md-input-container class="">
+      <input mdInput class="" placeholder="First Name" value="" name="firstname">
+    </md-input-container>
+
+    <md-input-container class="">
+      <input mdInput class="" placeholder="Last Name" value="" name="lastname" >
+    </md-input-container>
+
+
+    <md-input-container class="">
+    <input mdInput class="" placeholder="Email" name="email" >
+  </md-input-container>
+
+
+  <!--<md-input-container class="form-half-width">
+    <input mdInput class="font-size-16" placeholder="Email" [formControl]="emailFormControl" name="email" ngModel>
+    <md-error *ngIf="emailFormControl.hasError('pattern')">
+      Please enter a valid email address
+    </md-error>
+    <md-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </md-error>
+  </md-input-container>-->
+
+    <md-input-container class="">
+      <span mdPrefix>+92 &nbsp;</span>
+      <input type="tel" mdInput placeholder="Telephone" name="telephone" >
+      <md-icon mdSuffix>mode_edit</md-icon>
+    </md-input-container>
+
+    <md-select class="" placeholder="Interests" name="Interests" >
+      <md-option *ngFor="let interest of interests" [value]="interest.value" class="">
+        {{ interest.viewValue }}
+      </md-option>
+    </md-select>
+
+
+    <md-input-container class="">
+      <input mdInput #message maxlength="256" placeholder="Message" class="">
+      <md-hint align="start"><strong class="ff-archivo">Don't disclose personal info</strong> </md-hint>
+      <md-hint align="end">{{message.value.length}} / 256</md-hint>
+    </md-input-container>
+
+    <br>
+
+    <button md-button type="submit" value="Submit" class=""> Submit !</button>
+
+  </form>
+</div>

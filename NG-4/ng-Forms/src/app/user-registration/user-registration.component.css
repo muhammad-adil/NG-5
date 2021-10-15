@@ -1,0 +1,48 @@
+.form-container{
+    width: 700px;
+    margin: 0 auto
+}
+
+.form-full-width{
+    width: 100%;
+}
+
+.form-half-width{
+    width: calc(50% - 3%);
+    margin:5px 1% ;
+}
+
+md-select, md-option{
+    text-align: center;
+}
+
+.sub-btn{
+    display: block;
+    margin: 0 auto;
+    background-color: #9932cc;
+}
+
+.ff-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.ff-archivo{
+    font-family: 'Archivo', sans-serif;
+}
+
+.mat-input-placeholder-wrapper, .mat-focused{
+    font-family: 'Archivo', sans-serif;
+    /*font-size: 14px;
+    text-align: center;*/
+}
+
+.font-size-14{
+    font-size:14px;
+}
+
+.font-size-16{
+    font-size:16px;
+}
+
+.m-t-10{
+    margin-top: 10px;
+}

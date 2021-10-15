@@ -1,0 +1,39 @@
+.slider-container{
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slider{
+    transition: all 2s;
+}
+.slide{
+    width: 500px;
+    height: 200px;
+}
+
+.btn-cst{
+    background: #424446;
+    border: none;
+    color: #CCC;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 15px;
+}
+.dots{
+    text-align: left;
+    margin-top: 10px;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 50px;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer; 
+}
+.activeDot{
+    background: #ccc;
+}
+.m-t-10{margin-top: 10px;}

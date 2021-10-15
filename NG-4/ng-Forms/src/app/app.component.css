@@ -1,0 +1,12 @@
+.tab-container{
+    width: 750px;
+    margin: 0 auto;
+}
+
+::ng-deep .tabs .mat-tab-list{
+    max-width: 50%!important;
+}
+
+/*/deep/ .md-tab-label {
+  min-width: 1px !important;
+}*/

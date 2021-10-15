@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,500,600,700|Roboto:300,400,500,700');
+
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Archivo', sans-serif;*/

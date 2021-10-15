@@ -1,0 +1,76 @@
+page-home {
+    ion-content{
+        // background-color:#ff8080 !important;
+        background-color:#FBFF00 !important;
+    
+        .bg{
+            background: url(../assets/intro-img.png) no-repeat center center ;
+            height: 70%;
+            width: 100%;
+            background-size: contain;
+        }
+
+        .top-buttons{
+            display: flex;
+            flex-direction: row;
+        }
+        .top-buttons button{
+            flex: 1;
+            background-color: #000 !important;
+        }
+        // .top-buttons button:first-child {
+        //     background-color: #000 !important;
+        // }
+        // .top-buttons button:last-child {
+        //     background-color: #111 !important;
+        // }
+    }
+}
+
+#custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: #FF0202;
+  }
+  
+  .flb {
+    background-color: #1B58A7;
+    height:100%;
+    width:100%;
+    animation: pulse 1s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aligner-item {
+    max-width: 50%;
+  }
+  .aligner-item--top {
+    align-self: flex-start;
+  }
+  .aligner-item--bottom {
+    align-self: flex-end;
+  }
+  #custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    animation: animation 3100ms linear infinite both;
+    animation-delay: 1s;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+

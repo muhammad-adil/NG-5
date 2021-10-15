@@ -1,0 +1,13 @@
+<div class="container">
+  <p>student-list works!</p>
+
+  <div class="card card-block" *ngFor="let student of studentsList">
+      
+      <h4 class="card-title"> {{ student.name }} </h4>
+      <h3 class="card-text" [hidden]="student.hide"> {{ student.age }} </h3>
+      <button class="btn btn-primary" (click)="student.toggle(student)">Toggle</button>
+ 
+  </div>
+
+</div>
+ 

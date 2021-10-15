@@ -1,0 +1,17 @@
+.container{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.input{
+    width: 100%;
+    flex: auto;
+}
+button{
+    width: 100px;
+    align-self: right;
+}
+
+.flex-1{
+    flex: 1;
+}

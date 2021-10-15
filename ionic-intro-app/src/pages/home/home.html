@@ -1,0 +1,29 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <div class="flb">
+      <div class="aligner-item aligner-item--top"></div>
+      <!-- <img src="assets/logo.svg"> -->
+      <img src="assets/ninja.svg" />
+      <div class="aligner-item aligner-item--bottom"></div>
+    </div>
+  </div>
+
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Social Network
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="bg"></div>
+
+  <div class="top-buttons">
+      <button ion-button item-left (click)="signIn()">Sign In</button>
+      <button ion-button item-left (click)="register()">Register</button>
+  </div>
+
+  <!-- <button ion-button color="light" (click)="openPage()"> Click Me </button> -->
+</ion-content>
